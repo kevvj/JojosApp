@@ -1,0 +1,127 @@
+
+
+.stand-container{
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+    text-align: center;
+    width: calc(100% - 315px);
+    gap: 30px;
+    position: relative;
+    background: white;
+    padding: 20px 35px;
+    box-shadow: 0 2px 3px rgba(100, 100, 100, 0.5);
+    
+    border-radius: 5px;
+
+    
+}
+
+.img-container{
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+}
+
+.img-container img{
+    width: 150px;
+}
+
+
+
+
+.stand-block, .stand-block-back{
+    width: 100%;
+    min-height: 100%; 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    box-sizing: border-box;
+    background: white;
+    transition: opacity 0.9s;
+}
+
+.stand-block-back {
+    position: absolute;
+    top: 0%;
+}
+
+.stand-block{
+    position: relative;
+    z-index: 1; 
+}
+
+.stand-block-back p{
+    color: var(--secundary-color-dark);
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+
+.stand-block-back h3{
+    color: var(--primary-color-dark);
+    margin-bottom: 0;
+    margin-top: 10px;
+    
+}
+
+.stand-block-back ul li a{
+    color: rgb(153, 43, 173);
+}
+
+
+.card-container{
+    position: relative;
+    text-align: center;
+    width: 248px;
+    height: auto;
+}
+
+.name{
+    font-size: 1.2rem;
+}
+
+.flip-card:hover .stand-block {
+    opacity: 0; 
+    z-index: 0; 
+}
+
+.flip-card:hover .stand-block-back {
+    opacity: 1; 
+    z-index: 0; 
+}
+
+@media(max-width: 700px){
+    
+    .stand-container{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card-container{
+        width: 100%;
+    }
+
+    .stand-block{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stand-block{
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+.stand-block::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Ajusta según sea necesario para la superposición */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Ajusta según sea necesario para la superposición */
+    background-color: transparent; /* Cambia al color de fondo deseado */
+    z-index: 2; /* Asegura que el pseudo-elemento esté por encima del contenido del .stand-block */
+}
