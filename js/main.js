@@ -175,45 +175,48 @@ const all = document.querySelector('#all');
 
 a1.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(1);
+    clearStands()
+    fetchStd(1)
 });
 
 a2.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(2);
+    clearStands()
+    fetchStd(2)
 });
 
 a3.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(3);
+    clearStands()
+    fetchStd(3)
 });
 
 a4.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(4);
+    clearStands()
+    fetchStd(4)
 });
 
 a5.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(5);
+    clearStands()
+    fetchStd(5)
 });
 
 a6.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(6);
+    clearStands()
+    fetchStd(6)
 });
 
 all.addEventListener('click', () => {
     event.preventDefault();
-    clearStands();
-    fetchStd(0);
+    clearStands()
+    fetchStd(0)
 });
+
+clearStands()
+fetchStd(0)
 
 
 
