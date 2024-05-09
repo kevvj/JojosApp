@@ -20,6 +20,47 @@ aside h3{
     border-bottom: solid 1px #ccc;
 }
 
+.rating-conteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.rating{
+    position: relative;
+    display: flex;
+    padding: 30px 40px;
+    gap: 5px;
+    flex-direction: row-reverse;
+}
+
+.rating input{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.rating input::before {
+    content: '\f005';
+    position: absolute;
+    font-family: "fontAwesome";
+    font-size: 34px;
+    color:var(--primary-color);
+    transition: .5s;
+}
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before{
+
+    color: var(--primary-color-dark);
+
+}
+
 .widget{
     margin-bottom: 50px;
 }
@@ -32,19 +73,16 @@ aside h3{
 
 }
 
-.widget form input[type = "submit"]{
+#rating-button{
     width: 100%;
     color: white;
     background: var(--secundary-color);
     padding: 10px;
     border: none;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
-.widget form input[type = "submit"]:hover{
-    cursor: pointer;
-    background: var(--secundary-color-dark);
-}
 
 .widget ul{
     list-style-type: circle;

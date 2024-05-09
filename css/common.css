@@ -10,7 +10,7 @@ html, body{
     height: 100%;
     background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradiente blanco a gris */
     overflow-y: auto; /* Permitimos el desplazamiento vertical si es necesario */
-    position: relative; /* Agregado para utilizar pseudo-elemento */
+
 }
 
 
@@ -19,7 +19,6 @@ html, body{
 #container{
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
 }
 
 ul{
