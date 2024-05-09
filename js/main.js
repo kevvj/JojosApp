@@ -1,4 +1,5 @@
-const StandContainer = document.querySelector('.stand-container'); // Obtener el contenedor de stands
+const StandContainer = document.querySelector('.stand-container') // Obtener el contenedor de stands
+const Spinner = document.querySelector('#spinner-container')
 
 
 const fetchStd = (part) => {
@@ -9,57 +10,19 @@ const fetchStd = (part) => {
     .then((res) => res.json())
     .then((data) => {
         stands = data.slice()
-        console.log(stands)
+        Spinner.style.display = "block"
+        clearStands()
         for(let indice in stands){
             createStand(indice, stands)
-            console.log(indice)
         }
+        
+        Spinner.style.display = "none"
     })
 
 }
 
-// function fetchStands(part) {
-//     switch (part) {
-//         case 1:
-//             for (let indice in standspart1) {
-//                 createStand(indice, standspart1);
-//             }
-//             break;
-//         case 2:
-//             for (let indice in standspart2) {
-//                 createStand(indice, standspart2);
-//             }
-//             break;
-//         case 3:
-//             for (let indice in standspart3) {
-//                 createStand(indice, standspart3);
-//             }
-//             break;
-//         case 4:
-//             for (let indice in standspart4) {
-//                 createStand(indice, standspart4);
-//             }
-//             break;
-//         case 5:
-//             for (let indice in standspart5) {
-//                 createStand(indice, standspart5);
-//             }
-//             break;
-//         case 6:
-//             for (let indice in standspart6) {
-//                 createStand(indice, standspart6);
-//             }
-//             break;
-
-//         default: allStands()
-//             for (let indice in allS) {
-//                 createStand(indice, allS);
-//             }
-//             break;
-//     }
-// }
-
 function createStand(inx, stands) {
+    
     const flipcard = document.createElement('div');
     flipcard.classList.add('flip-card');
 
@@ -215,7 +178,7 @@ all.addEventListener('click', () => {
     fetchStd(0)
 });
 
-clearStands()
+
 fetchStd(0)
 
 
