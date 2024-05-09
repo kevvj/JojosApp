@@ -46,6 +46,10 @@ display: inline-block;
     border-top: solid 1px #ccc;
 }
 
+#main-menu > ul > li > ul > li {
+   min-width: 150px;
+}
+
 #main-menu > ul > li > ul > li > a:hover{
     background: var(--primary-color-dark);
 }
