@@ -1,22 +1,29 @@
 const StandContainer = document.querySelector('.stand-container') // Obtener el contenedor de stands
-const Spinner = document.querySelector('#spinner-container')
+const Spinner = document.querySelector('.spinner-container')
 
+Spinner.style.display = "none"
+
+const loading = (FS) =>{
+    FS.style.display = "flex"
+    StandContainer.appendChild(FS)
+}
 
 const fetchStd = (part) => {
 
+    cloneSpinner = Spinner.cloneNode(true)
     let stands = []
-
+    loading(cloneSpinner)
     fetch(`https://apijojos.onrender.com/part/${part}`)
     .then((res) => res.json())
     .then((data) => {
         stands = data.slice()
-        Spinner.style.display = "block"
+        
+        
         clearStands()
         for(let indice in stands){
             createStand(indice, stands)
         }
         
-        Spinner.style.display = "none"
     })
 
 }
@@ -137,43 +144,43 @@ const a6 = document.querySelector('#a6');
 const all = document.querySelector('#all');
 
 a1.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(1)
 });
 
 a2.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(2)
 });
 
 a3.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(3)
 });
 
 a4.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(4)
 });
 
 a5.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(5)
 });
 
 a6.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(6)
 });
 
 all.addEventListener('click', () => {
-    event.preventDefault();
+    event.preventDefault()
     clearStands()
     fetchStd(0)
 });
