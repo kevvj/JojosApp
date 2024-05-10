@@ -28,6 +28,11 @@ const fetchStd = (part) => {
 
 }
 
+const RatingPage = () =>{
+    const a = 1
+    
+}
+
 function createStand(inx, stands) {
     
     const flipcard = document.createElement('div');
