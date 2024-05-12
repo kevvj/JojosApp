@@ -1,5 +1,6 @@
-const StandContainer = document.querySelector('.stand-container') // Obtener el contenedor de stands
+const StandContainer = document.querySelector('.stand-container') 
 const Spinner = document.querySelector('.spinner-container')
+const copyButton = document.querySelector('.copy-button')
 
 Spinner.style.display = "none"
 
@@ -17,21 +18,18 @@ const fetchStd = (part) => {
     .then((res) => res.json())
     .then((data) => {
         stands = data.slice()
-        
-        
         clearStands()
         for(let indice in stands){
             createStand(indice, stands)
         }
-        
     })
-
 }
 
 const RatingPage = () =>{
-    const a = 1
-    
+    const a = 1 
 }
+let copied = ''
+
 
 const setArticle = () =>{
 
@@ -54,10 +52,19 @@ const setArticle = () =>{
     link.classList.add('link-container')
     const plink = document.createElement('p')
     plink.textContent = 'https://apijojos.onrender.com/'
+    
+    const copy = ()=>{
+        navigator.clipboard.writeText(plink.textContent)
+        console.log('Texto copiado con exito')
+    }
+    const copyButton = document.createElement('button')
+    copyButton.classList.add('copy-button')
+    copyButton.onclick = copy
+    
     link.appendChild(plink)
+    link.appendChild(copyButton)
 
     
-
     const text3 = document.createElement('p')
     text3.textContent = 'This fetch will return all stands from JoJos Bizarre Adventure (all parts).'
 
@@ -68,9 +75,11 @@ const setArticle = () =>{
     txtcontainer.appendChild(link)
     txtcontainer.appendChild(text3)
     StandContainer.appendChild(txtcontainer)
-
-    
 }
+
+// setArticle()
+fetchStd(0)
+
 
 
 function createStand(inx, stands) {
@@ -230,5 +239,6 @@ all.addEventListener('click', () => {
     fetchStd(0)
 });
 
-fetchStd(0)
+
+
 
