@@ -77,8 +77,8 @@ const setArticle = () =>{
     StandContainer.appendChild(txtcontainer)
 }
 
-// setArticle()
-fetchStd(0)
+setArticle()
+// fetchStd(0)
 
 
 
