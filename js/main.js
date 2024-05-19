@@ -135,13 +135,14 @@ const setArticle = () =>{
     f1.appendChild(functions('}'))
     f1.appendChild(string('`'))
     f1.appendChild(symbol(')'))
-    f1.appendChild(point('.'))
-    
-    
-    
     
 
+    const f2 = document.createElement('p')
+    
+    f2.appendChild(point('.'))
+    
     fetchexample.appendChild(f1)
+    fetchexample.appendChild(f2)
 
     
     const text4 = document.createElement('p')
