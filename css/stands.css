@@ -61,19 +61,31 @@
 }
 
 .code-container .string {
-    color: #d69d85;
+    color: rgb(111, 176, 101);
 }
 
 .code-container .comment {
-    color: #6a9955;
+    color: #434443;
 }
 
 .code-container .function {
-    color: #dcdcaa;
+    color: #923697;
 }
 
 .code-container .variable {
     color: #9cdcfe;
+}
+
+.code-container .postvariable {
+    color: #e11937;
+}
+
+.code-container .symbol{
+    color: rgb(226, 159, 72);
+}
+
+.code-container .point{
+    color: rgb(91, 51, 248);
 }
 
 .code-container p{

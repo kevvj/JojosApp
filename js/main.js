@@ -33,6 +33,55 @@ let copied = ''
 
 const setArticle = () =>{
 
+    const symbol = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('symbol')
+        sym.textContent = s
+        return sym
+    }
+
+    const functions = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('function')
+        sym.textContent = s
+        return sym
+    }
+
+    const variable = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('variable')
+        sym.textContent = s
+        return sym
+    }
+
+    const postvariable = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('postvariable')
+        sym.textContent = s
+        return sym
+    }
+
+    const string = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('string')
+        sym.textContent = s
+        return sym
+    }
+
+    const keyword = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('keyword')
+        sym.textContent = s
+        return sym
+    }
+
+    const point = (s)=>{
+        const sym = document.createElement('span')
+        sym.classList.add('point')
+        sym.textContent = s
+        return sym
+    }
+
     const txtcontainer = document.createElement('div')
     txtcontainer.classList.add('txt-container')
 
@@ -54,7 +103,7 @@ const setArticle = () =>{
     const api = 'https://apijojos.onrender.com/'
 
     const plink = document.createElement('p')
-    plink.classList.add('comment')
+    plink.classList.add('string')
     plink.textContent = '"https://apijojos.onrender.com/"'
 
     
@@ -70,9 +119,33 @@ const setArticle = () =>{
     link.appendChild(plink)
     link.appendChild(copyButton)
 
-    
     const text3 = document.createElement('p')
-    text3.textContent = 'This fetch will return all stands from JoJos Bizarre Adventure (all parts).'
+    text3.textContent = 'Code example'
+
+    const fetchexample = document.createElement('div')
+    fetchexample.classList.add('code-container')
+
+    const f1 = document.createElement('p')
+    
+    f1.appendChild(keyword('fetch'))
+    f1.appendChild(symbol('('))
+    f1.appendChild(string('`https://apijojos.onrender.com/part/'))
+    f1.appendChild(functions('${'))
+    f1.appendChild(postvariable('part'))
+    f1.appendChild(functions('}'))
+    f1.appendChild(string('`'))
+    f1.appendChild(symbol(')'))
+    f1.appendChild(point('.'))
+    
+    
+    
+    
+
+    fetchexample.appendChild(f1)
+
+    
+    const text4 = document.createElement('p')
+    text4.textContent = 'This fetch will return all stands from JoJos Bizarre Adventure (all parts).'
 
     txtcontainer.appendChild(title)
     txtcontainer.appendChild(text)
@@ -80,6 +153,7 @@ const setArticle = () =>{
     txtcontainer.appendChild(text2)
     txtcontainer.appendChild(link)
     txtcontainer.appendChild(text3)
+    txtcontainer.appendChild(fetchexample)
     StandContainer.appendChild(txtcontainer)
 }
 
