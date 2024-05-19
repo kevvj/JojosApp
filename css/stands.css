@@ -77,6 +77,10 @@
     font-size: 20px;
 }
 
+.link-container .string {
+    color: rgb(111, 176, 101);
+}
+
 
 .code-container{
     overflow-x: auto;

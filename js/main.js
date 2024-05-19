@@ -163,12 +163,25 @@ const setArticle = () =>{
 
     const f4 = document.createElement('p')
     f4.appendChild(postvariable('stands'))
-    f4.appendChild(functions(' ='))
+    f4.appendChild(functions(' = '))
+    f4.appendChild(postvariable('data'))
+    f4.appendChild(point('.'))
+    f4.appendChild(functions('slice'))
+    f4.appendChild(symbol('()'))
+
+    const f5 = document.createElement('p')
+    f5.appendChild(functions('}'))
+
+    const f6 = document.createElement('p')
+    f6.appendChild(functions('}'))
+    f6.appendChild(symbol(')'))
     
     fetchexample.appendChild(f1)
     fetchexample.appendChild(f2)
     fetchexample.appendChild(f3)
     fetchexample.appendChild(f4)
+    fetchexample.appendChild(f5)
+    fetchexample.appendChild(f6)
 
     
     const text4 = document.createElement('p')
