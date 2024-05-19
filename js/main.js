@@ -49,12 +49,18 @@ const setArticle = () =>{
     text2.textContent = 'To use the API, the first step is to fetch the API link.'
     
     const link = document.createElement('div')
-    link.classList.add('link-container')
+    link.classList.add('code-container')
+
+    const api = 'https://apijojos.onrender.com/'
+
     const plink = document.createElement('p')
-    plink.textContent = 'https://apijojos.onrender.com/'
+    plink.classList.add('comment')
+    plink.textContent = '"https://apijojos.onrender.com/"'
+
+    
     
     const copy = ()=>{
-        navigator.clipboard.writeText(plink.textContent)
+        navigator.clipboard.writeText(api)
         console.log('Texto copiado con exito')
     }
     const copyButton = document.createElement('button')
@@ -77,8 +83,8 @@ const setArticle = () =>{
     StandContainer.appendChild(txtcontainer)
 }
 
-// setArticle()
-fetchStd(0)
+setArticle()
+// fetchStd(0)
 
 
 
