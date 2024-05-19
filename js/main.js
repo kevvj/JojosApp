@@ -98,7 +98,7 @@ const setArticle = () =>{
     text2.textContent = 'To use the API, the first step is to fetch the API link.'
     
     const link = document.createElement('div')
-    link.classList.add('code-container')
+    link.classList.add('link-container')
 
     const api = 'https://apijojos.onrender.com/'
 
