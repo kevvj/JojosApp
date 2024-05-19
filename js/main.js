@@ -140,9 +140,35 @@ const setArticle = () =>{
     const f2 = document.createElement('p')
     
     f2.appendChild(point('.'))
+    f2.appendChild(functions('then'))
+    f2.appendChild(symbol('(('))
+    f2.appendChild(postvariable('res'))
+    f2.appendChild(point(''))
+    f2.appendChild(symbol(')'))
+    f2.appendChild(functions('=>'))
+    f2.appendChild(postvariable(' res'))
+    f2.appendChild(point('.'))
+    f2.appendChild(functions('json'))
+    f2.appendChild(symbol('())'))
+
+    const f3 = document.createElement('p')
+    f3.appendChild(point('.'))
+    f3.appendChild(functions('then'))
+    f3.appendChild(symbol('(('))
+    f3.appendChild(postvariable('data'))
+    f3.appendChild(point(''))
+    f3.appendChild(symbol(')'))
+    f3.appendChild(functions('=>'))
+    f3.appendChild(functions('{'))
+
+    const f4 = document.createElement('p')
+    f4.appendChild(postvariable('stands'))
+    f4.appendChild(functions(' ='))
     
     fetchexample.appendChild(f1)
     fetchexample.appendChild(f2)
+    fetchexample.appendChild(f3)
+    fetchexample.appendChild(f4)
 
     
     const text4 = document.createElement('p')
