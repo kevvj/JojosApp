@@ -11,7 +11,7 @@ const loading = (FS) =>{
 
 const fetchStd = (part) => {
 
-    cloneSpinner = Spinner.cloneNode(true)
+    const cloneSpinner = Spinner.cloneNode(true)
     let stands = []
     loading(cloneSpinner)
     fetch(`https://apijojos.onrender.com/part/${part}`)
@@ -126,55 +126,68 @@ const setArticle = () =>{
     fetchexample.classList.add('code-container')
 
     const f1 = document.createElement('p')
-    
-    f1.appendChild(keyword('fetch'))
-    f1.appendChild(symbol('('))
-    f1.appendChild(string('`https://apijojos.onrender.com/part/'))
-    f1.appendChild(functions('${'))
-    f1.appendChild(postvariable('part'))
-    f1.appendChild(functions('}'))
-    f1.appendChild(string('`'))
-    f1.appendChild(symbol(')'))
-    
+
+    f1.appendChild(keyword('let '))
+    f1.appendChild(postvariable('stands'))
+    f1.appendChild(functions(' = '))
+    f1.appendChild(functions('[]'))
 
     const f2 = document.createElement('p')
     
-    f2.appendChild(point('.'))
-    f2.appendChild(functions('then'))
-    f2.appendChild(symbol('(('))
-    f2.appendChild(postvariable('res'))
-    f2.appendChild(point(''))
+    f2.appendChild(keyword('fetch'))
+    f2.appendChild(symbol('('))
+    f2.appendChild(string('`https://apijojos.onrender.com/part/'))
+    f2.appendChild(functions('${'))
+    f2.appendChild(postvariable('part'))
+    f2.appendChild(functions('}'))
+    f2.appendChild(string('`'))
     f2.appendChild(symbol(')'))
-    f2.appendChild(functions('=>'))
-    f2.appendChild(postvariable(' res'))
-    f2.appendChild(point('.'))
-    f2.appendChild(functions('json'))
-    f2.appendChild(symbol('())'))
-
+    
     const f3 = document.createElement('p')
+    
+    
     f3.appendChild(point('.'))
     f3.appendChild(functions('then'))
     f3.appendChild(symbol('(('))
-    f3.appendChild(postvariable('data'))
+    f3.appendChild(postvariable('res'))
     f3.appendChild(point(''))
     f3.appendChild(symbol(')'))
     f3.appendChild(functions('=>'))
-    f3.appendChild(functions('{'))
+    f3.appendChild(postvariable(' res'))
+    f3.appendChild(point('.'))
+    f3.appendChild(functions('json'))
+    f3.appendChild(symbol('())'))
 
     const f4 = document.createElement('p')
-    f4.appendChild(postvariable('stands'))
-    f4.appendChild(functions(' = '))
-    f4.appendChild(postvariable('data'))
+    
     f4.appendChild(point('.'))
-    f4.appendChild(functions('slice'))
-    f4.appendChild(symbol('()'))
+    f4.appendChild(functions('then'))
+    f4.appendChild(symbol('(('))
+    f4.appendChild(postvariable('data'))
+    f4.appendChild(point(''))
+    f4.appendChild(symbol(')'))
+    f4.appendChild(functions('=>'))
+    f4.appendChild(functions('{'))
 
     const f5 = document.createElement('p')
-    f5.appendChild(functions('}'))
+
+    f5.appendChild(postvariable('stands'))
+    f5.appendChild(functions(' = '))
+    f5.appendChild(postvariable('data'))
+    f5.appendChild(point('.'))
+    f5.appendChild(functions('slice'))
+    f5.appendChild(symbol('()'))
 
     const f6 = document.createElement('p')
-    f6.appendChild(functions('}'))
-    f6.appendChild(symbol(')'))
+
+    f6.appendChild(functions('    }'))
+
+    const f7 = document.createElement('p')
+    
+    f7.appendChild(functions('}'))
+    f7.appendChild(symbol(')'))
+
+    
     
     fetchexample.appendChild(f1)
     fetchexample.appendChild(f2)
@@ -182,6 +195,7 @@ const setArticle = () =>{
     fetchexample.appendChild(f4)
     fetchexample.appendChild(f5)
     fetchexample.appendChild(f6)
+    fetchexample.appendChild(f7)
 
     
     const text4 = document.createElement('p')
@@ -199,8 +213,6 @@ const setArticle = () =>{
 
 setArticle()
 // fetchStd(0)
-
-
 
 function createStand(inx, stands) {
     
