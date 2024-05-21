@@ -16,6 +16,7 @@
 margin: 10px 0px;
 float: none; 
 display: inline-block; 
+position: relative; /* Agregado */
 }
 
 #main-menu > ul > li > a{
