@@ -23,6 +23,7 @@ const fetchStd = (part) => {
             createStand(indice, stands)
         }
     })
+    
 }
 
 const RatingPage = () =>{
@@ -180,22 +181,20 @@ const setArticle = () =>{
 
     const f6 = document.createElement('p')
 
-    f6.appendChild(functions('    }'))
+    
+    f6.appendChild(functions('}'))
+    f6.appendChild(symbol(')'))
 
-    const f7 = document.createElement('p')
+    const code = document.createElement('div')
     
-    f7.appendChild(functions('}'))
-    f7.appendChild(symbol(')'))
+    code.appendChild(f1)
+    code.appendChild(f2)
+    code.appendChild(f3)
+    code.appendChild(f4)
+    code.appendChild(f5)
+    code.appendChild(f6)
 
-    
-    
-    fetchexample.appendChild(f1)
-    fetchexample.appendChild(f2)
-    fetchexample.appendChild(f3)
-    fetchexample.appendChild(f4)
-    fetchexample.appendChild(f5)
-    fetchexample.appendChild(f6)
-    fetchexample.appendChild(f7)
+    fetchexample.appendChild(code)
 
     
     const text4 = document.createElement('p')
@@ -311,12 +310,12 @@ const fillout = (partJojo) => {
 }
 
 function allStands() {
-    fillout(standspart1)
-    fillout(standspart2)
     fillout(standspart3)
     fillout(standspart4)
     fillout(standspart5)
     fillout(standspart6)
+    fillout(standspart7)
+    fillout(standspart8)
 }
 
 
@@ -332,43 +331,43 @@ const all = document.querySelector('#all');
 a1.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(1)
+    fetchStd(3)
 });
 
 a2.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(2)
+    fetchStd(4)
 });
 
 a3.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(3)
+    fetchStd(5)
 });
 
 a4.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(4)
+    fetchStd(6)
 });
 
 a5.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(5)
+    fetchStd(7)
 });
 
 a6.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(6)
+    fetchStd(8)
 });
 
 all.addEventListener('click', () => {
     event.preventDefault()
     clearStands()
-    fetchStd(0)
+    fetchStd(9)
 });
 
 
