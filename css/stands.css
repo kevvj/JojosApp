@@ -1,67 +1,69 @@
 .stand-container {
     float: right;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye el espacio entre las cartas */
+    align-items: center; /* Alinea las cartas al inicio verticalmente */
     margin-top: 10px;
     text-align: center;
     width: calc(100% - 315px);
     gap: 30px;
-    position: relative;
     padding: 20px 35px;
     box-shadow: 0px 0px 3px rgba(100, 100, 100, 0.5);
     border-radius: 5px;
     min-height: 100%;
+}
+
+.card-container {
+    flex: 1 1 30%; /* Las cartas ocuparán al menos el 30% del ancho disponible */
+    max-width: 300px; /* Aumenta el tamaño máximo para permitir un mayor tamaño de las cartas */
+    margin: 10px;
+    text-align: center;
     position: relative;
 }
 
 .txt-container {
     width: 100%;
-    grid-column: 1/-1;
 }
 
-.txt-container h2{
+.txt-container h2 {
     color: var(--primary-color-dark);
     font-size: 40px;
 }
 
-.txt-container h3{
+.txt-container h3 {
     color: var(--primary-color-dark);
     font-size: 30px;
     margin-top: 15px;
     text-align: left;
 }
 
-.txt-container p{
+.txt-container p {
     color: var(--secundary-color);
     font-size: 25px;
     margin-top: 15px;
     text-align: left;
     font-weight: bold;
-    
+    overflow-wrap: break-word;
 }
 
-.link-container{
+.link-container {
     color: #d4d4d4;
     margin: 30px;
     border: .3px solid #000;
     border-radius: 5px;
-    display:inline-flex;
+    display: inline-flex;
     box-shadow: 5px 5px 5px #ccc;
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
 }
 
-.link-container p{
+.link-container p {
     font-size: 17px;
-}
-
-.link-container p{
-    margin-top: none;
-    padding: 30px;
     margin-top: 0px;
 }
 
-.link-container button{
+.link-container button {
     width: 50px;
     appearance: none;
     -webkit-appearance: none;
@@ -70,7 +72,7 @@
     cursor: pointer;
 }
 
-.link-container button::before{
+.link-container button::before {
     font-family: "fontAwesome";
     content: '\f328';
     background: none;
@@ -81,8 +83,7 @@
     color: rgb(111, 176, 101);
 }
 
-
-.code-container{
+.code-container {
     overflow-x: auto;
     color: #d4d4d4;
     margin: 30px;
@@ -93,9 +94,10 @@
     padding: 30px;
 }
 
-.code-container p{
+.code-container p {
     font-size: 17px;
     white-space: pre;
+    margin-top: 0px;
 }
 
 .code-container .keyword {
@@ -122,31 +124,20 @@
     color: #e11937;
 }
 
-.code-container .symbol{
+.code-container .symbol {
     color: rgb(226, 159, 72);
 }
 
-.code-container .point{
+.code-container .point {
     color: rgb(91, 51, 248);
 }
 
-.code-container p{
-    
-    margin-top: 0px;
-}
-
-
-
-.code-container button::before{
+.code-container button::before {
     font-family: "fontAwesome";
     content: '\f328';
     background: none;
     font-size: 20px;
 }
-
-
-
-
 
 .img-container {
     background-repeat: no-repeat;
@@ -155,11 +146,8 @@
 }
 
 .img-container img {
-    width: 150px;
+    width: 200px;
 }
-
-
-
 
 .stand-block,
 .stand-block-back {
@@ -187,30 +175,16 @@
     color: var(--secundary-color-dark);
     margin-bottom: 0;
     margin-top: 0;
-
 }
 
 .stand-block-back h3 {
     color: var(--primary-color-dark);
     margin-bottom: 0;
     margin-top: 10px;
-
 }
 
 .stand-block-back ul li a {
     color: rgb(153, 43, 173);
-}
-
-
-.card-container {
-    position: relative;
-    text-align: center;
-    width: 248px;
-    height: auto;
-}
-
-.name {
-    font-size: 1.2rem;
 }
 
 .flip-card:hover .stand-block {
@@ -224,24 +198,13 @@
 }
 
 @media(max-width: 700px) {
-
     .stand-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         width: 100%;
     }
 
     .card-container {
         width: 100%;
+        margin-bottom: 20px;
     }
-
-    .stand-block {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .stand-block {
-        width: auto;
-        height: auto;
-    }
-
 }
