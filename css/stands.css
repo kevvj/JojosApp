@@ -2,8 +2,8 @@
     float: right;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribuye el espacio entre las cartas */
-    align-items: center; /* Alinea las cartas al inicio verticalmente */
+    justify-content: space-between;
+    align-items: center; 
     margin-top: 10px;
     text-align: center;
     width: calc(100% - 315px);
@@ -15,8 +15,8 @@
 }
 
 .card-container {
-    flex: 1 1 30%; /* Las cartas ocuparán al menos el 30% del ancho disponible */
-    max-width: 300px; /* Aumenta el tamaño máximo para permitir un mayor tamaño de las cartas */
+    flex: 1 1 30%; 
+    max-width: 300px; 
     margin: 10px;
     text-align: center;
     position: relative;
