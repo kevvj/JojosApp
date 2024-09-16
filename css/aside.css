@@ -6,6 +6,7 @@ aside{
     border: solid 1px #ccc;
     box-shadow: 2px 2px 5px #ccc;
     padding: 30px;
+    height: 100%;
 }
 
 aside h3{

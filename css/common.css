@@ -8,38 +8,38 @@ html, body{
     padding: 0;
     font-family:"NunitoSans-Regular", Arial, Helvetica, sans-serif;
     height: 100%;
-    background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradiente blanco a gris */
-    overflow-y: auto; /* Permitimos el desplazamiento vertical si es necesario */
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2); 
+    overflow-y: auto;
 
 }
 
-.spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Ocupa todo el ancho del contenedor padre */
-    height: 100%; /* Ocupa todo el alto del contenedor padre */
-    position: relative; /* Posiciona el contenedor del spinner respecto a su contenedor padre */
-}
-
-.spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
+.spinner{
+    border: 4px solid rgba(0,0,0,.1);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border-left-color: var(--primary-color-dark);
+
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.spinner-container {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
 
 
 
